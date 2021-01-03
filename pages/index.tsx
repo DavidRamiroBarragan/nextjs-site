@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Feed from "../components/Feed/Feed";
 
 function index() {
   return (
@@ -6,7 +7,9 @@ function index() {
       <Head>
         <title>Front page of internet</title>
       </Head>
-      <main>Hello world</main>
+      <main>
+        <Feed />
+      </main>
     </>
   );
 }
