@@ -4,24 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "ts-node -O {\"\"\"module\"\"\":\"\"\"commonjs\"\"\"} ./server/index.ts",
+    "dev": "concurrently --kill-others \"npm run serve\" \"next\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/styled-components": "^5.1.7",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "next": "^10.0.4",
+    "node-fetch": "^2.6.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "styled-components": "^5.2.1"
+    "styled-components": "^5.2.1",
+    "ts-node": "^9.1.1"
   },
   "devDependencies": {
+    "@types/styled-components": "^5.1.7",
     "@types/node": "^14.14.19",
     "@types/react": "^17.0.0",
+    "babel-plugin-styled-components": "^1.12.0",
     "typescript": "^4.1.3"
   }
 }

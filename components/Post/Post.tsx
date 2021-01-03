@@ -1,22 +1,21 @@
 import Link from "next/link";
-import { Card, Content, Figure, Title } from "./style";
+import { FunctionComponent } from "react";
+import { Post as PostType } from "../../shared/types";
+import { Card, Lead, Figure, Title } from "./style";
 
-const Post = () => {
+interface PostProps {
+  post: PostType;
+}
+
+const Post: FunctionComponent<PostProps> = ({ post }) => {
   return (
-    <Link href="/post/[id]" as="/post/example" passHref>
+    <Link href="/post/[id]" as={`/post/${post.id}`} passHref>
       <Card>
         <Figure>
-          <img src="Post photo" alt="/image1.jpg" />
+          <img alt={post.title} src={post.image} />
         </Figure>
-        <Title>Post title!</Title>
-        <Content>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-            commodi omnis nam ipsum maxime, expedita accusantium magni minima ut
-            obcaecati cumque aliquid, molestiae ex pariatur nisi ullam numquam!
-            Esse, aperiam.
-          </p>
-        </Content>
+        <Title>{post.title}</Title>
+        <Lead>{post.lead}</Lead>
       </Card>
     </Link>
   );
