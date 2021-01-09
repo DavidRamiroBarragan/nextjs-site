@@ -31,6 +31,12 @@ export const GlobalStyle = createGlobalStyle<MainThemeProps>`
   a { color: ${({ theme }) => theme.colors.blue} }
   a:hover { color: ${({ theme }) => theme.colors.pink} }
 
+  input,
+  textarea,
+  button {
+    font-family: ${({ theme }) => theme.fonts.basic};
+  }
+
   .main {
     padding: 70px 0 20px;
     min-height: calc(100vh - 50px);

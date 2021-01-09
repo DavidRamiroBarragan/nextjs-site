@@ -1,19 +1,19 @@
-import React, { FunctionComponent } from "react"
-import Link from "next/link"
-import { Post as PostType } from "../../shared/types"
-import { PostCard } from "../Post"
-import { Grid, Title, MoreLink } from "./style"
+import React, { FunctionComponent } from "react";
+import Link from "next/link";
+import { Post as PostType } from "../../shared/types";
+import { PostCard } from "../Post";
+import { Grid, Title, MoreLink } from "./style";
 
 interface SectionProps {
-  title: string
-  posts: PostType[]
-  isCompact?: boolean
+  title: string;
+  posts: PostType[];
+  isCompact?: boolean;
 }
 
 export const Section: FunctionComponent<SectionProps> = ({
   title,
   posts,
-  isCompact = false
+  isCompact = false,
 }) => {
   return (
     <section>
@@ -30,5 +30,5 @@ export const Section: FunctionComponent<SectionProps> = ({
         </Link>
       )}
     </section>
-  )
-}
+  );
+};

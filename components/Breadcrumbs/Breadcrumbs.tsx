@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from "react"
-import Link from "next/link"
-import { Post } from "../../shared/types"
-import { Container } from "./style"
+import React, { FunctionComponent } from "react";
+import Link from "next/link";
+import { Post } from "../../shared/types";
+import { Container } from "./style";
 
 interface BreadcrumbsProps {
-  post: Post
+  post: Post;
 }
 
 export const Breadcrumbs: FunctionComponent<BreadcrumbsProps> = ({ post }) => {
@@ -18,5 +18,5 @@ export const Breadcrumbs: FunctionComponent<BreadcrumbsProps> = ({ post }) => {
         <a>{post.category}</a>
       </Link>
     </Container>
-  )
-}
+  );
+};
