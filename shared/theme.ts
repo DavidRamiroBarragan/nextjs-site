@@ -10,6 +10,7 @@ export const theme = {
     blue: "#387af5",
     pink: "#eb57a3",
     // Credits: https://colors.lol/fou.
+    gray: "#aaa",
   },
 };
 

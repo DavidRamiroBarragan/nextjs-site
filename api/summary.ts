@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import { Category, Post } from "../shared/types";
+import { Post, Category } from "../shared/types";
 import { config } from "./config";
 
 export async function fetchPosts(): Promise<Post[]> {

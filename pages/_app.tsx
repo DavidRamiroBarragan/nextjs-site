@@ -1,8 +1,10 @@
+import React from "react";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
-import { Center } from "../components/Center/style";
-import Footer from "../components/Footer/Footer";
-import Header from "../components/Header/Header";
+
+import { Header } from "../components/Header";
+import { Footer } from "../components/Footer";
+import { Center } from "../components/Center";
 import { GlobalStyle, theme } from "../shared/theme";
 
 export default function MyApp({ Component, pageProps }) {
@@ -10,8 +12,9 @@ export default function MyApp({ Component, pageProps }) {
     <ThemeProvider theme={theme}>
       <GlobalStyle theme={theme} />
       <Head>
-        <title>What's Next?</title>
+        <title>What's Next?!</title>
       </Head>
+
       <Header />
       <main className="main">
         <Center>

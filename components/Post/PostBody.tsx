@@ -1,15 +1,17 @@
-import React, { FunctionComponent } from "react";
-import Link from "next/link";
-import { Post } from "../../shared/types";
-import { Title, Figure, Content, Meta } from "./PostBodyStyle";
+import React, { FunctionComponent } from "react"
+import Link from "next/link"
+import { Post } from "../../shared/types"
+import { Breadcrumbs } from "../../components/Breadcrumbs"
+import { Title, Figure, Content, Meta } from "./PostBodyStyle"
 
 interface PostBodyProps {
-  post: Post;
+  post: Post
 }
 
 export const PostBody: FunctionComponent<PostBodyProps> = ({ post }) => {
   return (
     <div>
+      <Breadcrumbs post={post} />
       <Title>{post.title}</Title>
       <Figure>
         <img src={post.image} alt={post.title} />
@@ -27,5 +29,5 @@ export const PostBody: FunctionComponent<PostBodyProps> = ({ post }) => {
         <a href={post.source}>Source</a>
       </Meta>
     </div>
-  );
-};
+  )
+}
